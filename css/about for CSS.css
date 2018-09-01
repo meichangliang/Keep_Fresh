@@ -1,0 +1,159 @@
+.about{
+	width: 100%;
+	position: absolute;
+	z-index: 55;
+	background-color:rgba(17,44,63,0.9);
+	bottom: -100%;
+	left: 0px;
+}
+.about>div{
+	background: url(../img/content-bg-tile.jpg);
+	height: 85%;
+	width: 100%;
+	position: absolute;
+	bottom:-100%;
+}
+.about>div>div{
+	width: 80%;
+	height: 80%;
+	margin: 5% 10%;
+	margin-top: 100%;
+}
+.about_left{
+	width: 75%;
+	height: 100%;
+	float: left;
+}
+.about_right{
+	width: 25%;
+	height: 100%;
+	float: right;
+}
+.about_right span{font-weight: bold;font-size: 14px;}
+.about_right>div{
+	width: 2.5cm;
+	height: 3.5cm;
+	margin: 10px auto;
+	border: 1px dashed black;
+	overflow: hidden;
+}
+.about_right>div>img{
+	width: 100%;
+}
+.about_right>ul{
+	width:100%;
+	height: 100%;
+	padding: 5px 10px 0px 10px;
+}
+.about_right>ul>li{
+	margin: 5px 0px;
+	line-height: 30px;
+}
+
+.left_title{
+	width: 100%;
+	height: 30%;
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 4em;
+	color:darkcyan;
+	line-height:240%;
+	padding-left: 20px;
+	text-align: center;
+}
+.left_1{
+	width: 70%;
+	height: 70%;
+	float:left;
+	font-size:18px;
+	font-family: "楷体";
+	line-height: 30px;
+	color: #335D84;
+}
+.left_1 span{
+	font-weight: bold;
+	color:#00ACA7;
+}
+.left_2{
+	width: 30%;
+	height: 70%;
+	float: right;
+	text-align: center;
+	color:  darkslateblue;
+}
+.left_2 span{
+	display:inline-block;
+	width: 16px;
+	height: 50px;
+	float:left;
+	margin:10px 5px 10px 12px;
+	font-weight: bold;
+	font-family: "黑体";
+	font-size: 14px;
+}
+.left_2 a{
+	display:inline-block;
+	width: 16px;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	font-family: "楷体";
+	font-size: 16px;
+	color: cadetblue;
+}
+.left_2 a:hover{text-decoration: none;}
+.a_1{margin-top: 80px;}
+.a_1:hover{color: #006DCC;}
+.a_2{margin-top: 110px;}
+.a_2:hover{color: #521E18;}
+.a_3{margin-top: 140px;}
+.a_3:hover{color: #112C3F;}
+.a_4{margin-top: 170px;}
+.a_4:hover{color: #4400EE;}
+
+/*XX关闭按钮*/
+.delta{
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 26px;
+	top: -25px;
+	left: 13%;
+	background: url(../img/delta.png) no-repeat center center;
+	cursor: pointer;
+}
+.closeAbout{
+	width: 15px;
+	height: 15px;
+	top: 100%;
+	left: 35%;
+	position: absolute;
+	background: url(../img/X.png) no-repeat center center;
+	background-size: 70%;
+	transition: 0.3s;
+}
+.closeAbout:hover{transform:rotate(90deg);background-size: 100%;}
+/*关闭按钮结束*/
+/*跳转遮罩层*/
+.curtain{
+	width: 100%;
+	height: 80%;
+	background-color: red;
+	position: fixed;
+	top: 100%;
+	z-index: 99;
+}
+.curtain_1{
+	width: 100%;
+	height: 80%;
+	background-color: yellowgreen;
+	position: absolute;
+	top: 20%;
+}
+.curtain_2{
+	width: 100%;
+	height: 80%;
+	background-color: blue;
+	position: absolute;
+	top: 20%;
+}

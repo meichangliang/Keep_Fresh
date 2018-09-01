@@ -1,0 +1,274 @@
+@charset "utf-8";
+html {overflow:hidden; }
+body{
+	position: relative;
+	background: black;
+    overflow: hidden;
+    height: 100%;
+    background: #000;
+    background: url(../img/bg-tile.jpg);
+}
+.wrapper {
+    position:relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2000px;
+    overflow: hidden;
+}
+/*主页的文字内容*/
+.homeContent{
+	width: 100%;
+	position:fixed;
+    text-align: center;
+    color: #112C3F;
+    z-index:8;
+    top: 2%;
+    display: none;
+}
+/*上半部分*/
+	/*标题*/
+.homeContentTitle p{
+	font-size:60px;
+	letter-spacing: 0.2em;
+	font-weight: bold;
+}
+	/*标题结束*/
+	/*小标题*/
+.homeContentSubtitle span{
+	font-size: 18px;
+	letter-spacing: 0.2em;
+    color: #112C3F;
+	font-weight: bold;
+}
+.homeContentSubtitle{
+	width: 350px;
+	margin: 0px auto;
+}
+.homeContentSubtitle svg{
+	margin-top: 8px;
+	width: 55px;
+	height: 8px;
+}
+.homeContentSubtitleLeft{
+	float: left;
+}
+.homeContentSubtitleRight{
+	float: right;
+}
+	/*小标题结束*/
+/*上半部分结束*/
+/*介绍*/
+.homeContentIntro{
+    font-size:16px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    line-height: 1.3em;
+    color: #677887;
+    padding: 10px 24%;
+    display: none;
+    cursor: pointer;
+}
+.homeContentBottom{display: none;}
+/*介绍结束*/
+/*下一页按钮*/
+.enter svg{
+	margin: 0px;
+	padding: 0px;
+	width: 250px;
+	height: 50px;
+	position: absolute;
+	top:0px;
+	left: 0px;
+}
+.enter{
+	width: 250px;
+	height: 50px;
+	display: inline-block;
+	position: relative;
+	top: 10px;
+	left: 3px;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 5;
+}
+.jump_span span{
+	height: 24px;
+	width: 16px;
+	font-size: 20px;
+	font-weight: bold;
+	display: inline-block;
+	margin: 0px 3px;
+	color:#FDF2D3;
+	position: absolute;
+	z-index: 6;
+	top: 12px;
+}
+.s1{
+	left:65px ;
+}
+.s2{
+	left:87px;
+}
+.s3{
+	left:109px ;
+}
+.s4{
+	left:131px ;
+}
+.s5{
+	left:153px;
+}
+.enter i{
+	position: absolute;
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	overflow: hidden;
+	border-radius: 50%;
+	background-color:#FDF2D3;
+	top: 21px;
+	color: white;
+	z-index: 6;
+}
+.yuan1{
+	left: 19px;
+}
+.yuan2{
+	right: 23px;
+}
+/*下一页按钮结束*/
+/*作者信息按钮*/
+.author{
+	width: 90px;
+	margin: 0px auto;
+	position: relative;
+	cursor: pointer;
+	display: block;
+	padding-top: 20px;
+    color: #8495af;
+    font-size:15px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    z-index: 5;
+}
+.author:hover{
+	text-decoration: none;
+	color: #335d84;
+}
+/*背景*/
+.img_bg{
+	position:absolute;
+	bottom: -300px;
+	width:100%;
+	display: none;
+}
+/*云朵*/
+.Clouds{
+	position:absolute;
+	top: 2%;
+	width: 100%;
+	height: 80%;
+}
+.Clouds img{
+	position: absolute;
+}
+.homeContentTop,.homeContentIntro,.homeContentBottom{
+	position: relative;z-index: 6;
+}
+/*火苗*/
+.fx{
+	position:fixed;
+	width: 128px;
+	height: 175px;
+	bottom: 28%;
+	left:18.7%;
+	display:none;
+}
+.fx div{
+	float: left;
+	background-color: red;
+	background: url(../img/fx.png) no-repeat 0px 0px;
+	background-size: 800%;
+	position: absolute;
+}
+.fx_1{
+	width: 10px;
+	height:12px;
+}
+.fx_2{
+	width: 20px;
+	height:25px;
+}
+.fx_3{
+	width: 30px;
+	height: 37px;
+}
+.fx_4{
+	width: 40px;
+	height: 50px;
+}
+.fx_5{
+	width: 50px;
+	height: 62px;
+}
+/*小人儿*/
+.img_boy{
+	position: absolute;
+	bottom: 3%;	
+	left: 12%;
+	display: none;
+}
+/*烟雾*/
+.smog{
+	position: fixed;
+	width: 95px;
+	height: 214px;
+	overflow: hidden;
+	background: url(../img/smogsing.png) no-repeat 0px 0px;
+	background-size: 1400%;
+	bottom: 60%;
+	left:18.9%;
+	opacity: 0.2;
+	display: none;
+}
+.water{
+	position: absolute;
+	bottom: 0%;
+	right:1%;
+	z-index: 8;
+	display: none;
+}
+.boat{
+	width: 120px;
+	position: absolute;
+	bottom: 1.5%;
+	right:2%;
+	z-index: 5;
+	display: none;
+}
+/*加载动画*/
+.jiazai{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(14,41,58,0.8);
+	z-index: 999;
+}
+.jiazai>img{
+	position:absolute;
+	top: 35%;
+	left: 45%;
+}
+/*铭牌*/
+.mingpai{
+	position: fixed;
+	width: 64px;
+	height: 44px;
+	bottom: 14%;
+	left: 54%;
+	display: none;
+	transition: .5s;
+}
