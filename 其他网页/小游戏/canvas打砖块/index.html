@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="梅昌亮" />
+	<meta name="copyright" content="网站版权" />
+	<meta name="keywords" content="网站关键字" />
+	<meta name="description" content="网站描述" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>canvas高性能打方块小游戏</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<style type="text/css">
+		#canvas{margin: 0 auto;cursor: pointer;}
+	</style>
+	<!--[if IE]>
+		<script src="js/html5shiv.js" type="text/javascript" charset="utf-8"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>HTML5 canvas高性能打方块小游戏 <span>制作者：梅昌亮</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="../../../Keep Fresh.html" title="Keep Fresh首页" target="_blank"><span>Keep Fresh首页</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="../小游戏主页.html" title="返回小游戏主页" target="_blank"><span>返回小游戏主页</span></a>
+			</div>
+		</header>
+		<canvas id="canvas" width="800" height="600"></canvas>
+		<div class="related">
+			<a href="../../../Keep Fresh.html">
+			  <h3>查看作者更多作品</h3>
+			</a>
+		</div>
+	</div>
+</body>
+<script>
+	document.onselectstart=function () {return false}	
+</script>
+<script src="js/BlockBlaster.js"></script>
+</html>

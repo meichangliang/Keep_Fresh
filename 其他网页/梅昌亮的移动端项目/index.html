@@ -1,0 +1,190 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.5,minimum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="author" content="梅昌亮" />
+	<meta name="copyright" content="网站版权" />
+	<meta name="keywords" content="网站关键字" />
+	<meta name="description" content="网站描述" />
+    <title>主页</title>        
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/flexslider.css" />    
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript">
+			var $ = jQuery.noConflict();
+			$(window).load(function() {
+				$('#slider').flexslider({
+					animation: "slide",
+					directionNav: true,
+					animationLoop: false,
+					controlNav: false, 
+					slideToStart: 1,
+					slideshow: true,
+					animationDuration: 300,
+					start: function(){
+						 $('#slider').animate({opacity: 1}, 750);
+					},
+				});
+			});
+	</script>
+    </head>
+    <body>
+
+    	<section id="page-wrapper">
+        
+        	<section id="menu-wrapper">
+            	
+                <div id="menu-search">
+                	<input id="menu-search-input-text" type="text" placeholder="Search..." />
+					<input id="menu-search-input-submit" type="submit" value="" />
+                </div>
+            
+                <ul class="menu">
+                    
+                    <li class="icon home">
+                        <a href="index.html">
+                            <span class="menu-li-title">网站首页</span>
+                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />                        </a>                    </li>
+                    
+                    <li class="icon box">
+                        <a href="portfolio.html">
+                            <span class="menu-li-title">作品展示</span>
+                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />                        </a>                    </li>
+                    
+                    <li class="icon info">
+                        <a href="aboutus.html">
+                            <span class="menu-li-title">关于我们</span>
+                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />                        </a>                    </li>
+                    
+                    <li id="a-submenu-1" class="icon plus">
+                    
+                        <a href="#">
+                            <span class="menu-li-title">二级菜单</span>
+                            <img class="menu-li-arrow-submenu" src="img/icons/submenu.png" alt="" />                        </a>
+                        
+                        <ul id="submenu-1">
+                        	<li>
+                                <a href="index.html">
+                                    <span class="menu-li-title">幻灯片</span>
+                                    <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />                                </a>                            </li>
+                            
+                            <li>
+                                <a href="index.html">
+                                    <span class="menu-li-title">二级菜单</span>
+                                    <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />                                </a>                            </li>
+                        </ul>
+                    </li>
+ 
+                    <li class="icon blog">
+                        <a href="blog.html">
+                            <span class="menu-li-title">新闻资讯</span>
+                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />                        </a>                    </li>
+                    
+                    <li class="icon book">
+                        <a href="typography.html">
+                            <span class="menu-li-title">服务项目</span>
+                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />                        </a>                    </li>
+                    
+                    <li class="icon mail">
+                        <a href="contact.html">
+                            <span class="menu-li-title">联系我们</span>
+                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />                        </a>                    </li>
+                    
+                    <li class="icon star">
+                        <a href="../Apple/Apple.html">
+                            <span class="menu-li-title">苹果官网</span>
+                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />                        </a>                    </li>
+                </ul>
+            </section>
+        
+        	<section id="content-wrapper">
+                	
+                <section id="header">
+                
+                    <div id="header-left">
+                        <a href="#" id="a-menu"><img src="img/icons/menu.png" alt="menu" /></a>                    </div>
+                    
+                    <div id="header-title">
+                        <h1>北邮在线</h1>
+                    </div>
+                    
+                    <div id="header-right">
+                        <a href="#" id="header-search-link"><img src="img/icons/share.png" alt="Search" /></a>                    </div>
+                </section>
+                
+                <section id="slider">
+                    <ul class="slides">
+                        <li><img src="img/slider/1.jpg" alt="" /></li>
+                        <li><img src="img/slider/3.jpg" alt="" /></li>
+                        <li><img src="img/slider/2.jpg" alt="" /></li>
+                    </ul>
+                </section>
+                
+                <article>
+                
+                	<div class="wrapper">
+                    
+                    	<span class="post-date">2016年7月1日, 14:13</span>
+                        <h2>北邮在线欢迎您</h2>
+                        
+                        <p class="prologue">在中国，每小时有10名北邮在线学员入职IT公司。<br />
+                        	每天有80多名北邮在线学员被IT公司录用，每月有2500多名学员走上工作岗位。<br />
+                        	每新增10名软件工程师，至少一名来自于北邮在线，在中国，有软件工程师的地方就有北邮在线学员。</p>
+                    </div>
+                    
+                    <table class="contact">
+                    	<tr>
+                        	<td><a href="tel:123456789"><img src="img/icons/big-tel.png" alt="" /></a></td>
+                            <td><a href="###"><img src="img/icons/big-mail.png" alt="" /></a></td>
+                            <td><a href="###" ><img src="img/icons/big-web.png" alt="" /></a></td>
+                            <td><a href="###" ><img src="img/icons/big-cart.png" alt="" /></a></td>
+                        </tr>
+                        
+                        <tr class="info">
+                        	<td colspan="4"><img src="img/icons/small-web.png" alt="" /><span><a href="###">http://www.beiyouzx.com/</a></span></td>
+                        </tr>
+                        
+                        <tr class="info">
+                        	<td colspan="4"><img src="img/icons/small-mail.png" alt="" /><span>beiyouzx@4gosc.com</span></td>
+                        </tr>
+                        
+                        <tr class="info">
+                        	<td colspan="4"><img src="img/icons/small-home.png" alt="" /><span>西安市雁塔区长安中路99号华旗国际大厦B座7楼 （小寨什子东南角国贸大厦南邻）</span></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="wrapper">
+                        
+                        <p>当前，国内外的智能手机市场都在如日中天的发展，
+							据市场调研机构NPDGroup最新报告显示：
+								2016年第一季度，智能手机每日的出货量都在50万台以上，
+									专家预测，未来将有更多的人选择智能手机。
+										拥有世界上最大的手机用户群体的中国，
+											智能手机市场已经迅速膨胀。</p>
+						<p>每天超过50万台的智能手机设备出货，
+							随之而来引发了UI设计人才的严重用工荒，
+								2016年，UI设计人才需求预计缺口有50万。
+									未来10年内，UI设计人才需求预计将达到120万。
+										我们相信，在未来几年内，
+										UI设计师都将是互联网和游戏动漫行业最炙手可热的岗位。</p>
+
+						<p><a href="blog.html"><input type="button" value="新闻资讯" /></a><a href="###"><input type="button" value="官方网站" /></a></p>
+                    </div>
+                </article>
+            
+                <section id="footer">
+                    <div id="footer-left">
+                        <span>陕ICP备10009409号 &copy; 2016 - 2017</span>                    </div>
+                    
+                    <div id="footer-right">
+                        <span>www.梅昌亮.com</span>                    </div>    
+                </section>
+            </section>
+    	</section>
+    </body>
+</html>

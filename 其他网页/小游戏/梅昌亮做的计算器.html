@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>计算器(梅昌亮制作)</title>
+		<style type="text/css">
+			table input{width:100px;height:100px;padding:0px;
+				border:none;
+				background-color:#FAFBFC;
+				font-size: 33px;color: #979CA4;
+				border: 1px solid #E3E7E9;
+				}
+			[value="C"]{font-size: 50px;color: #EE6D29;}
+			.backShen{background: #F7F8F9;}
+			#deng{height: 202px;background-color:#FB7631 ;color: #FFFFFF;}
+			[value="0"]{width: 202px;}
+			#box{width: 465px;height: 580px;margin: 20px auto;}
+			[name="xianShiQi"]{
+				background-color:#E3E7E9 ; 
+				border: none; margin: 0px 3px;padding: 0px 12px;
+				width: 388px;height: 140px;
+				font-family: "微软雅黑";font-size: 60px;
+				outline: none;
+				}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<bdo dir="rtl"><input type="text" name="xianShiQi" id="xianShiQi"/></bdo>
+			<table>
+				<tr>
+					<td>
+						<input type="button" id="qingChu" value="C" class="backShen" onclick="clearAll();"/>
+					</td>
+					<td>
+						<input type="button" id="tuiGe" value="◀" class="backShen" onclick="back();"/>
+					</td>
+					<td>
+						<input type="button" name="yunSan" id="chu" value="÷" class="backShen" onclick="fuHao(this);">						
+					</td>
+					<td>
+						<input type="button" name="yunSan" id="cheng" value="×" class="backShen" onclick="fuHao(this);"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" name="shuZi" id="" value="7" onclick="jiLu(this);"/>
+					</td>
+					<td>
+						<input type="button" name="shuZi" id="" value="8" onclick="jiLu(this);"/>
+					</td>
+					<td>
+						<input type="button" name="shuZi" id="" value="9" onclick="jiLu(this);"/>
+					</td>
+					<td>
+						<input type="button" name="yunSan" id="jian" value="－" class="backShen" onclick="fuHao(this);"/>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="button" name="shuZi" id="" value="4" onclick="jiLu(this);"/></td>
+					<td><input type="button" name="shuZi" id="" value="5" onclick="jiLu(this);"/></td>
+					<td><input type="button" name="shuZi" id="" value="6" onclick="jiLu(this);"/></td>
+					<td>
+						<input type="button" name="yunSan" id="jia" value="＋" class="backShen" onclick="fuHao(this);"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" name="shuZi" id="" value="1" onclick="jiLu(this);"/>
+					</td>
+					<td>
+						<input type="button" name="shuZi" id="" value="2" onclick="jiLu(this);"/>
+					</td>
+					<td>
+						<input type="button" name="shuZi" id="" value="3" onclick="jiLu(this);"/>
+					</td>
+					<td rowspan="2">
+						<input type="button" name="yunSan" id="deng" value="=" onclick="jieGuo();" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="button" name="shuZi" id="" value="0" onclick="jiLu(this);" />
+					</td>
+					<td>
+						<input type="button" name="dian" id="" value="." onclick="jiLu(this);"/>
+					</td>
+				</tr>			
+			</table>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+			var $aa; //保存点击运算符之前输入框中的数值
+			var $bb; //保存运算符
+			var $cc = false; //记录是否按下“=”键
+			//数字键事件
+			function jiLu(obj) {
+				var txt = $('xianShiQi');
+				if ($cc) {
+					txt.value = ""; //已进行过计算，则清空数值输入框重新开始
+					$cc = false;
+				}
+				//数值输入已经存在小数点,则不允许再输入小数点
+				if (/^\./g.test(txt.value)){
+					txt.value='0.'
+				}
+				if (txt.value.indexOf('.') > -1 && obj.value == '.'){return false;}				
+				txt.value=txt.value+obj.value; //将控件值赋给数值输入框中
+			}
+			//退格键事件
+			function back() {
+				var txt = $('xianShiQi');
+				txt.value = txt.value.substring(0, txt.value.length - 1);
+			}
+			//ce键事件：清空数字输入框
+			function clearAll() {
+				$('xianShiQi').value = "";
+				$aa = "";
+				$bb = "";
+			}
+			// +、-、*、/ 事件
+			function fuHao(obj) {
+				//将运算符保存入全局变量中
+				$bb = obj.value;
+				var txt = $('xianShiQi');
+				if (txt.value == ""){return false;}  //数值输入框中没有数字，则不能输入运算符
+				//将数值输入框中的值保存到计算表达式中
+				$aa = txt.value;
+				//清空输入框，以待输入操作值
+				txt.value = "";
+			}
+			//计算结果
+			function jieGuo() {
+				var opValue;
+				//计算表达式中存在运算符
+				var soValue = parseFloat($aa);
+				var txt = $('xianShiQi');
+				if ($bb =="×"){
+					opValue = soValue * parseFloat(txt.value);
+				}else if ($bb =="÷"){
+					opValue = soValue / parseFloat(txt.value);
+				}else if ($bb =="＋"){
+					opValue = soValue + parseFloat(txt.value);
+				}else if ($bb =="－"){
+					opValue = soValue - parseFloat(txt.value);
+				}
+				opValue = parseFloat(opValue);
+				if (opValue) {
+					txt.value = opValue;
+				}else{alert('错误')}				
+				$cc = true;
+				$aa = "";
+				$bb = "";
+				opValue = "";				
+			}
+	function $(obj){return document.getElementById(obj)}
+</script>

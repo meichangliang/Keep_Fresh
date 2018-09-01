@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>画板一：运动动画</title>
+		<meta name="author" content="梅昌亮" />
+		<meta name="copyright" content="网站版权" />
+		<meta name="keywords" content="网站关键字" />
+		<meta name="description" content="网站描述" />
+<style type="text/css">
+html{overflow: hidden;}
+body{background-color: darkgrey;}
+.mycanvas>canvas{
+	border: 1px solid #333333;
+}
+</style>
+	</head>
+	<body>
+		<div class="mycanvas">
+			<canvas width="1000" height="600"></canvas>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">	
+var cans=document.getElementsByClassName("mycanvas")[0].firstElementChild;
+var ctx=cans.getContext('2d');
+//让一个圆来运动起来
+var w=5,x=100,y=100,r=50,start=0,over=1.3;//圆的基本参数
+var m=1,n=2,v=0.5;//坐标与大小变化间隔
+var speen=20;//频率
+run1 ();	
+function run1 () {
+	var red=Math.floor(Math.random()*256);
+	var green=Math.floor(Math.random()*256);
+	var blue=Math.floor(Math.random()*256);
+ctx.beginPath();
+	start-=0.1;
+	over-=0.3;
+	x+=m;
+	y+=n;
+	if (x >= cans.width-r) {
+		m=-1;
+	}
+	if (y >= cans.height-r) {
+		n=-2;
+	}
+	if (x <= 0+r) {
+		m=1;
+	}
+	if (y <= 0+r) {
+		n=2;
+	}
+	r+=v
+	if (r<=5) {
+		v=0.5;
+	}
+	if (r>=100) {
+		v=-0.5;
+	}
+//ctx.clearRect(0,0,cans.width,cans.height);
+ctx.lineWidth=w;
+ctx.arc(x,y,r,start*Math.PI,over*Math.PI);
+ctx.lineTo(x,y);
+//ctx.lineTo(cans.width/2,cans.height/2);
+ctx.fillStyle='rgb('+red+','+green+','+blue+')';
+ctx.closePath();
+ctx.strokeStyle='#FF0000';
+ctx.fill();
+	setTimeout(run1,speen)
+}
+</script>

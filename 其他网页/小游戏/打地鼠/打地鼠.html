@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="梅昌亮" />
+		<meta name="copyright" content="网站版权" />
+		<meta name="keywords" content="网站关键字" />
+		<meta name="description" content="网站描述" />
+		<title>打地鼠(梅昌亮制作)</title>
+		<style type="text/css">
+			#daDiShu_box{
+				width: 500px;
+				height: 500px;
+				border: 2px solid #C5DC48;
+				overflow: hidden;
+				float: left;
+			}
+			#daDiShu_box div{
+				width: 98px;
+				height: 98px;
+				float: left;
+				background-color:#C5DC48;
+				border: 1px solid #C5DC48;
+			}
+			#daDiShu_box div img{width: 97px;}
+			#daDiShu_box div button{margin: 0px;padding: 0px;width: 97px;height: 97px;overflow: hidden;border: none;outline: none; }
+			#daDiShu_box div button:hover{cursor: pointer;}
+			/*样式的调整*/
+			.game_box{width:734px;height:600px;margin: 20px auto;}
+			.caozuoqu{background-color:darkgray;width: 230px;height: 504px;float: left;}
+			p{margin: 20px 5px;font-size: 20px;text-align: center;}
+			.caozuoqu input{margin: 20px 60px;padding: 6px 17px;font-size: 18px;}
+			.caozuoqu input{cursor:pointer;}
+			#shuoming .span_1{font-size: 16px;}
+			#shuoming .span_2{font-size: 21px;color: chocolate;}
+			#zhuangB{width:734px;height:20px;margin: 0px;padding: 0px;float: left;}
+			#zhuangB span{color: #FF0000;}
+		</style>
+	</head>
+	<body>
+		<div class="game_box">
+			<!--样式和说明区-->
+			<p id="shuoming">
+				<span class="span_1">操作说明:成功敲击一次地鼠得一分,漏掉一只扣一分,当分数为-5或者漏掉10只地鼠的时候游戏结束。</span>
+				<br />
+				<span class="span_2">注意!游戏将随着时间的流逝越来越快!!来挑战最高分吧!!</span>
+			</p>			
+				<!--游戏区-->	
+			<div id="daDiShu_box">
+				<div></div> <div></div> <div></div> <div></div> <div></div>
+				<div></div> <div></div> <div></div> <div></div> <div></div>
+				<div></div> <div></div> <div></div> <div></div> <div></div>
+				<div></div> <div></div> <div></div> <div></div> <div></div>
+				<div></div> <div></div> <div></div> <div></div> <div></div>
+			</div>
+			<!--控制区-->
+			<div class="caozuoqu">
+				<input type="button" id="start" value="开始游戏" />
+				<input type="button" id="over" value="结束游戏" />
+				<input type="button" id="agin" value="重新开始" />
+				<p id="jiShiQi_xianshi"> </p>
+				<p id="chuxian"> </p>
+				<p id="dazhong"> </p>
+				<p id="loudiao"> </p>
+				<p id="defen"> </p>					
+			</div>
+			<!--尾标,标装个B-->
+			<p id="zhuangB">更多游戏请关注梅昌亮的QQ号:670188307</p>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var arr=document.getElementById("daDiShu_box").getElementsByTagName("img");
+	var divs=document.getElementById("daDiShu_box").getElementsByTagName("div");
+	var start=document.getElementById("start");
+	var over=document.getElementById("over");
+	var chuxian=document.getElementById("chuxian");
+	var zhong=document.getElementById("dazhong");
+	var lou=document.getElementById("loudiao");
+	var shuoming=document.getElementById("shuoming");
+	var agin=document.getElementById("agin");
+	var zhuangB=document.getElementById("zhuangB");
+	var a=0;//记录地鼠出现的次数
+	var b=0;//记录打击地鼠的次数
+	var aa=0;//经过的秒数
+	var speen=3000;//设定地鼠出现的频率,数字越小出现越快
+//	计时器		
+	function sec(){
+		dd=parseInt(aa/60%60);
+		document.getElementById("jiShiQi_xianshi").innerHTML='游戏已进行:'+dd+'分'+aa+'秒'
+		aa++;
+		timer3=setTimeout(sec,1000);
+		speen=speen-20;	//游戏速度
+		if (speen<450) {
+			speen=450;
+			zhuangB.innerHTML="<span>速度已达最大!!每450毫秒一个!!!</span>"
+		}
+	}
+//	随机出现的地鼠
+	function dong() {
+		var num = Math.floor(Math.random()*25);	
+		a++;
+		divs[num].innerHTML='<button onclick="dianji(this);$remove(this);"><img src="img/01.jpg"/></button>';
+		//隔1.5秒消失一次
+		timer2=setTimeout(xiaoshi,1500)
+		function xiaoshi(){
+			divs[num].innerHTML='';			
+		}
+			console.log(speen);
+		timer=setTimeout(dong,speen);
+		//显示区域
+			chuxian.innerHTML='地鼠出现的次数:'+a;
+			lou.innerHTML='漏掉的地鼠:'+(a-b);
+			defen.innerHTML='得分:'+(b-(a-b));
+			if((b-(a-b))<=-5||(a-b)>=10){
+					alert('游戏失败!!你太菜了,换个人来!!')
+					clearTimeout(timer);
+					clearTimeout(timer2);
+					clearTimeout(timer3);
+					alert('您共玩了'+dd+'分'+aa+'秒')
+			}
+			if ((b-(a-b))>=50) {
+				shuoming.innerHTML="你已超神!! 来来让作者给你签个名!";
+			}
+	}	
+//点击效果
+	function dianji(obj){
+		obj.firstElementChild.setAttribute('src',"img/02.jpg");
+		b++;
+		zhong.innerHTML='打中的次数'+b;
+	}
+	function $remove(obj){
+		var obj = obj
+		setTimeout(function(){
+			obj.remove();
+		},300)		
+	}
+//	输出数字,a是地鼠出现的次数,b是打击地鼠的次数,(a-b)就是地鼠漏掉的次数,得分就是b-(a-b)
+	var chuxian=document.getElementById("chuxian");
+	var zhong=document.getElementById("dazhong");
+	var lou=document.getElementById("loudiao");
+	var defen=document.getElementById("defen");
+//	点击开始与暂停
+start.addEventListener('click',xx,false)
+function xx(){
+		start.value='暂停游戏';
+		dong();
+		sec();
+		this.removeEventListener('click',xx,false)
+		this.addEventListener('click',vv,false)
+	}
+function vv(){
+		start.value='继续游戏';
+		clearTimeout(timer2);
+		clearTimeout(timer);
+		clearTimeout(timer3);
+		this.removeEventListener('click',vv,false);
+		this.addEventListener('click',xx,false);
+	}
+//	点击结束
+	over.onclick=function(){
+		clearTimeout(timer);
+		alert('您得到了'+(b-(a-b))+'分!');
+	}
+//	点击重新开始
+	agin.onclick=function(){
+		window.location.reload();
+	}
+</script>

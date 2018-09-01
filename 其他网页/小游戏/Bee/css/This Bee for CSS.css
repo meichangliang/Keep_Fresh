@@ -1,0 +1,61 @@
+@charset "utf-8";
+html{overflow: hidden;}
+#div1{
+	width: 800px;
+	height: 600px;
+	overflow: hidden;
+	background: black;
+	margin: 20px auto;
+	position: relative;
+}
+#gameBtn{
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	border: 1px #fff solid;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	top: 285px;
+	left: 350px;	
+}
+#score{
+	color: #fff;
+	font-size: 2em;
+}
+#bee{
+	position: relative;
+}
+.enemy1{
+	width: 40px;
+	height: 28px;
+	background: url(../img/mf1.png) no-repeat;
+	float: left;
+}
+.enemy2{
+	width: 40px;
+	height: 28px;
+	background: url(../img/mf2.png) no-repeat;
+	float: left;
+}
+.enemy3{
+	width: 40px;
+	height: 28px;
+	background: url(../img/mf3.png) no-repeat;
+	float: left;
+}
+.air1{
+	width: 46px;
+	height: 60px;
+	background: url(../img/fj.png) no-repeat -2px 0px;
+	position: absolute;
+}
+.bullet{
+	width: 1px;
+	height: 10px;
+	overflow: hidden;
+	background: #FFF;
+	position: absolute;
+}
