@@ -1,209 +1,217 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta charset="utf-8">    
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.5,minimum-scale=1.0, user-scalable=no" name="viewport">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="author" content="梅昌亮" />
-	<meta name="copyright" content="网站版权" />
-	<meta name="keywords" content="网站关键字" />
-	<meta name="description" content="网站描述" />
+    <meta name="copyright" content="网站版权" />
+    <meta name="keywords" content="网站关键字" />
+    <meta name="description" content="网站描述" />
     <title>新闻资讯</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css" />      
     <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <link type="text/css" rel="stylesheet" href="css/flexslider.css" />      
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/flexslider.css" />
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-        
-    </head>
 
-    <body>
+</head>
 
-    	<section id="page-wrapper">
-        
-        	<section id="menu-wrapper">
-            	
-                <div id="menu-search">
-                	<input id="menu-search-input-text" type="text" placeholder="Search..." />
-					<input id="menu-search-input-submit" type="submit" value="" />
+<body>
+
+    <section id="page-wrapper">
+
+        <section id="menu-wrapper">
+
+            <div id="menu-search">
+                <input id="menu-search-input-text" type="text" placeholder="Search..." />
+                <input id="menu-search-input-submit" type="submit" value="" />
+            </div>
+
+            <ul class="menu">
+
+                <li class="icon home">
+                    <a href="index.html">
+                        <span class="menu-li-title">网站首页</span>
+                        <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
+                    </a>
+                </li>
+
+                <li class="icon box">
+                    <a href="portfolio.html">
+                        <span class="menu-li-title">作品展示</span>
+                        <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
+                    </a>
+                </li>
+
+                <li class="icon info">
+                    <a href="aboutus.html">
+                        <span class="menu-li-title">关于我们</span>
+                        <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
+                    </a>
+                </li>
+
+                <li id="a-submenu-1" class="icon plus">
+
+                    <a href="#">
+                        <span class="menu-li-title">二级菜单</span>
+                        <img class="menu-li-arrow-submenu" src="img/icons/submenu.png" alt="" />
+                    </a>
+
+                    <ul id="submenu-1">
+                        <li>
+                            <a href="index.html">
+                                <span class="menu-li-title">幻灯片</span>
+                                <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html">
+                                <span class="menu-li-title">二级菜单</span>
+                                <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
+                            </a>
+                        </li>
+                    </ul>
+
+                </li> <!-- #submenu-1 -->
+
+                <li class="icon blog">
+                    <a href="blog.html">
+                        <span class="menu-li-title">新闻资讯</span>
+                        <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
+                    </a>
+                </li>
+
+                <li class="icon book">
+                    <a href="typography.html">
+                        <span class="menu-li-title">服务项目</span>
+                        <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
+                    </a>
+                </li>
+
+                <li class="icon mail">
+                    <a href="contact.html">
+                        <span class="menu-li-title">联系我们</span>
+                        <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
+                    </a>
+                </li>
+
+                <li class="icon star">
+                    <a href="../Apple/Apple.html">
+                        <span class="menu-li-title">苹果官网</span>
+                        <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
+                    </a>
+                </li>
+
+            </ul> <!-- .menu -->
+
+        </section> <!-- #menu-wrapper -->
+
+        <section id="content-wrapper">
+
+            <section id="header">
+
+                <div id="header-left">
+                    <a href="#" id="a-menu"><img src="img/icons/menu.png" alt="menu" /></a>
                 </div>
-            
-                <ul class="menu">
-                    
-                    <li class="icon home">
-                        <a href="index.html">
-                            <span class="menu-li-title">网站首页</span>
-                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
-                        </a>
-                    </li>
-                    
-                    <li class="icon box">
-                        <a href="portfolio.html">
-                            <span class="menu-li-title">作品展示</span>
-                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
-                        </a>
-                    </li>
-                    
-                    <li class="icon info">
-                        <a href="aboutus.html">
-                            <span class="menu-li-title">关于我们</span>
-                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
-                        </a>
-                    </li>
-                    
-                    <li id="a-submenu-1" class="icon plus">
-                    
-                        <a href="#">
-                            <span class="menu-li-title">二级菜单</span>
-                            <img class="menu-li-arrow-submenu" src="img/icons/submenu.png" alt="" />
-                        </a>
-                        
-                        <ul id="submenu-1">
-                        	<li>
-                                <a href="index.html">
-                                    <span class="menu-li-title">幻灯片</span>
-                                    <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="index.html">
-                                    <span class="menu-li-title">二级菜单</span>
-                                    <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
-                                </a>
-                            </li>
-                        </ul>
-                        
-                    </li> <!-- #submenu-1 -->
- 
-                    <li class="icon blog">
-                        <a href="blog.html">
-                            <span class="menu-li-title">新闻资讯</span>
-                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
-                        </a>
-                    </li>
-                    
-                    <li class="icon book">
-                        <a href="typography.html">
-                            <span class="menu-li-title">服务项目</span>
-                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
-                        </a>
-                    </li>
-                    
-                    <li class="icon mail">
-                        <a href="contact.html">
-                            <span class="menu-li-title">联系我们</span>
-                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
-                        </a>
-                    </li>
-                    
-                    <li class="icon star">
-                        <a href="../Apple/Apple.html">
-                            <span class="menu-li-title">苹果官网</span>
-                            <img class="menu-li-arrow" src="img/icons/arrow-forward.png" alt="" />
-                        </a>
-                    </li>
-                
-                </ul> <!-- .menu -->
-                
-            </section> <!-- #menu-wrapper -->
-        
-        	<section id="content-wrapper">
-                	
-                <section id="header">
-                
-                    <div id="header-left">
-                        <a href="#" id="a-menu"><img src="img/icons/menu.png" alt="menu" /></a>
-                    </div>
-                    
-                    <div id="header-title">
-                        <h1>新闻资讯</h1>
-                    </div>
-                    
-                    <div id="header-right">
-                        <a href="#" id="header-search-link"><img src="img/icons/share.png" alt="Search" /></a>
-                    </div>
-                    
-                </section> <!-- #header -->   
-            
-            	<div class="blog-post">
-                	<img src="img/blog1.jpg" alt="Blog image" class="fullwidth" />
-                	<div class="wrapper">
-                    	<span class="post-date">2016-07-01</span>
-                        <h2 class="blog-post-title">UI设计师人才缺口50万培养需注重经验积累</h2>
-                        <p>据手机研发业内不全面统计，目前国内的4G研发人才缺口有三、四百万之众，其中UI设计师人才缺口已达到了50万左右。职业专家分析说由于目前UI设计师技术较新，整个行业的发展尚属于初级阶段，因此UI设计师人才将会在未来5-10年间长期保持着供不应求的状态。</p>
-                        <p><a href="#"><input type="button" value="更多…" /></a></p>
-                    </div>
-                    <div class="blog-meta">
-                    	<img src="img/avatar.png" alt="Avatar" />
-                        <h4 class="blog-meta-author"><a href="#">张小天</a></h4>
-                        <span>职业: <a href="#">UI设计师</a>, <a href="#">平均月薪8K+</a></span>
-                    </div> <!-- .blog-meta --> 
-                </div> <!-- .blog-post #1 --> 
-                
-                <div class="blog-post">
-                	<img src="img/blog2.jpg" alt="Blog image" class="fullwidth" />
-                	<div class="wrapper">
-                    	<span class="post-date">2016-07-01</span>
-                        <h2 class="blog-post-title">iOS开发者应用下载收入达Android五倍</h2>
-                        <p>据美国科技博客AppleInsider报道，尽管Android设备市场份额遥遥领先，iOS在货币化表现上依旧占据统治地位，给开发者带来的回报五倍于Android。</p>
-                        <p>Business Insider汇总的数据显示，iOS开发者应用下载每进账1.00美元，Android开发者仅进账0.19美元。预付和应用内购买收入的差距略小，iOS每赚1.00美元，Android赚0.43美元。广告收入差距最小，iOS每赚1.00美元，Android赚0.77美元。
-　	这些数据来自包括应用分析公司Flurry和App Annie在内的数个来源，它们是Android赢得市场份额之战而苹果拿下用户活跃度之战的最新证据。
-　　上个月，来自Facebook广告公司Nanigans的一份报告称，苹果平台带来的回报比同样的广告在Android上带来的足足高出近18倍。事实上，算上投资额，广告主在Android平台上投广告的回报率为负，达-10%。
-　　“受众在iPhone上花更多的钱，这就是值得在上面投资的原因。”Nanigans高级副总裁丹·斯拉根（Dan Slagen）当时表示，“通常来说，我们并不是要去获取一次性顾客，我们是想进行长远投资……因此我们预付更多的钱来谋求更高的长期回报。”</p>
-                        <p><a href="#"><input type="button" value="更多…" /></a></p>
-                    </div>
-                    <div class="blog-meta">
-                    	<img src="img/avatar.png" alt="Avatar" />
-                        <h4 class="blog-meta-author"><a href="#">张大天</a></h4>
-                        <span>职业: <a href="#">ios工程师</a>, <a href="#">月薪12K+</a></span>
-                    </div>
+
+                <div id="header-title">
+                    <h1>新闻资讯</h1>
                 </div>
-                
-                <div class="blog-post">
-                	<img src="img/blog3.jpg" alt="Blog image" class="fullwidth" />
-                	<div class="wrapper">
-                        <span class="post-date">2016-07-01</span>
-                        <h2 class="blog-post-title">嵌入式开发的门槛高吗？嵌入式开发好学</h2>
-                        <p>问：嵌入式开发的门槛高吗？嵌入式开发好学吗？ </p>
-                        <p>我们很多求职者都想从事高薪的嵌入式开发，但是嵌入式开发的门槛怎么样呢？学嵌入式技术需要哪些条件呢？理工科专业或大学专科及以上学历，对常用的计算机语言熟悉如： c、java、php、C#、.net等。那么怎样才能进入嵌入式领域呢？一般的途径主要有以下3种形式1、购买相关书籍进行自学选择这种方式的求职者，一般是初毕业的大学生或出于对嵌入式的喜欢而选择的这种方式。但是由于嵌入式的开发环境是需要Linux平台，ARM开发平台的。所以如果没有一定开发经验的“高人”进行指点，自学嵌入式开发也是有一定难度的。2、进一家与嵌入式开发有关的公司，边工作边学现在的企业很现实，他们更喜欢直接为企业创造价值的人才而不愿意其花时间、花金钱去培养一个嵌入式研发工程师，因为这样企业面临被“炒鱿鱼”的风险。 培养一个合格的嵌入式工程师，有一定实力的机构也需要3-5个月，而企业恐怕要花1年时间来培养一个新人成为嵌入式工程师。而即便如此，学会了嵌入式开发技术的新人，可能很快就会被别的公司挖走，因为嵌入式开发人才太紧缺，很多公司愿意花高价挖人才。3、选择具有一定规模和影响力的嵌入式人才外包机构直接进入嵌入式开发领域。这是一个很多求职者、大学应届毕业生，以及有一点嵌入式开发基础的人进入嵌入式开发行业的最快方式。 最大的好处有以下3点：1、非常完善的开发软件、硬件平台，并可以教给学员如何快速搭建开发环境。2、在项目经理的及实训导师的指导下，以大量的实验项目、企业商用源码最为实习案例，让学员尽快掌握嵌入式开发。3、选择一个具有影响力的外包机构，学员不仅实现的起点更高，更多的是为学员以后的发展奠定了坚实的技术基础，以便学员进入嵌入式领域后，真正成为一名合格的嵌入式开发工程师。</p>
-                        <p><a href="#"><input type="button" value="更多…" /></a></p>
-                    </div>
-                    <div class="blog-meta">
-                    	<img src="img/avatar.png" alt="Avatar" />
-                        <h4 class="blog-meta-author"><a href="#">张二天</a></h4>
-                        <span>职业: <a href="#">嵌入式开发工程师</a>, <a href="#">月薪20K+</a></span>
-                    </div>
+
+                <div id="header-right">
+                    <a href="#" id="header-search-link"><img src="img/icons/share.png" alt="Search" /></a>
                 </div>
-                
-                <div class="blog-post">
-                	<img src="img/blog4.jpg" alt="Blog image" class="fullwidth" />
-                	<div class="wrapper">
-                        <span class="post-date">2016-07-01</span>
-                        <h2 class="blog-post-title">北邮3g服务外包基地国庆期间新增的招聘</h2>
-                        <p>北邮3g服务外包基地在国庆节期间依然接到了众多合作企业的合作请求，为了满足合作企业用人紧，用人急，项目多的急切要求，对于有志于从事安卓软件开发、嵌入式软件开发的广大朋友，合作企业将按照“先面试、后实习、再上岗”的要求进行人才选拔，现将部分职位信息公告如下：
-上海华腾软件系统有限公司 工作地点：西安 上海1、统招大专及以上学历2、 熟悉Android开发，了解安卓开发的基本流程3、掌握Android的多线程、安全、性能等特性，有的App开发经验者优先4、有平板电脑开发经验优先。</p>
-                        <p><a href="#"><input type="button" value="更多…" /></a></p>
-                    </div>
-                    <div class="blog-meta">
-                    	<img src="img/avatar.png" alt="Avatar" />
-                        <h4 class="blog-meta-author"><a href="#">赵日天</a></h4>
-                        <span>职业: <a href="#">安卓开发工程师</a>, <a href="#">月薪16K+</a></span>
-                    </div>
+
+            </section> <!-- #header -->
+
+            <div class="blog-post">
+                <img src="img/blog1.jpg" alt="Blog image" class="fullwidth" />
+                <div class="wrapper">
+                    <span class="post-date">2016-07-01</span>
+                    <h2 class="blog-post-title">UI设计师人才缺口50万嘻嘻嘻啊实打实的阿松大需注重经验积累</h2>
+                    <p>据手机研发业内不全面统计，目前国内的4G研发人才缺口有三、四百万之众，其中UI设计师人才缺口已达到了50万左右。顶顶顶专家分析说由于目前UI设计师技术较新，整个行业的发展尚属于初级阶段，因此UI设计师人才将会在未来5-10年间长期保持着供不应求的状态。</p>
+                    <p><a href="#"><input type="button" value="更多…" /></a></p>
                 </div>
-            
+                <div class="blog-meta">
+                    <img src="img/avatar.png" alt="Avatar" />
+                    <h4 class="blog-meta-author"><a href="#">张小天</a></h4>
+                    <span>顶顶顶: <a href="#">UI设计师</a>, <a href="#">平均月薪8K+</a></span>
+                </div> <!-- .blog-meta -->
+            </div> <!-- .blog-post #1 -->
+
+            <div class="blog-post">
+                <img src="img/blog2.jpg" alt="Blog image" class="fullwidth" />
+                <div class="wrapper">
+                    <span class="post-date">2016-07-01</span>
+                    <h2 class="blog-post-title">iOS开发者应用下载收入达Android五倍</h2>
+                    <p>据美国科技博客AppleInsider报道，尽管Android设备市场份额遥遥领先，iOS在货币化表现上依旧占据统治地位，给开发者带来的回报五倍于Android。</p>
+                    <p>Business
+                        Insider汇总的数据显示，iOS开发者应用下载每进账1.00美元，Android开发者仅进账0.19美元。预付和应用内购买收入的差距略小，iOS每赚1.00美元，Android赚0.43美元。广告收入差距最小，iOS每赚1.00美元，Android赚0.77美元。
+                        　 这些数据来自包括应用分析公司Flurry和App Annie在内的数个来源，它们是Android赢得市场份额之战而苹果拿下用户活跃度之战的最新证据。
+                        　　上个月，来自Facebook广告公司Nanigans的一份报告称，苹果平台带来的回报比同样的广告在Android上带来的足足高出近18倍。事实上，算上投资额，广告主在Android平台上投广告的回报率为负，达-10%。
+                        　　“受众在iPhone上花更多的钱，这就是值得在上面投资的原因。”Nanigans高级副总裁丹·斯拉根（Dan
+                        Slagen）当时表示，“通常来说，我们并不是要去获取一次性顾客，我们是想进行长远投资……因此我们预付更多的钱来谋求更高的长期回报。”</p>
+                    <p><a href="#"><input type="button" value="更多…" /></a></p>
+                </div>
+                <div class="blog-meta">
+                    <img src="img/avatar.png" alt="Avatar" />
+                    <h4 class="blog-meta-author"><a href="#">张大天</a></h4>
+                    <span>顶顶顶: <a href="#">ios工程师</a>, <a href="#">月薪12K+</a></span>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="img/blog3.jpg" alt="Blog image" class="fullwidth" />
+                <div class="wrapper">
+                    <span class="post-date">2016-07-01</span>
+                    <h2 class="blog-post-title">嵌入式开发的门槛高吗？嵌入式开发好学</h2>
+                    <p>问：嵌入式开发的门槛高吗？嵌入式开发好学吗？ </p>
+                    <p>我们很多求职者都想从事高薪的嵌入式开发，但是嵌入式开发的门槛怎么样呢？学嵌入式技术需要哪些条件呢？理工科啊的法国或大学专科及以上学历，对常用的计算机语言熟悉如：
+                        c、java、php、C#、.net等。那么怎样才能进入嵌入式领域呢？一般的途径主要有以下3种形式1、购买相关书籍进行自学选择这种方式的求职者，一般是初毕业的大啊的法国得到或出于对嵌入式的喜欢而选择的这种方式。但是由于嵌入式的开发环境是需要Linux平台，ARM开发平台的。所以如果没有一定开发经验的“高人”进行指点，自学嵌入式开发也是有一定难度的。2、进一家与嵌入式开发有关的公司，边工作边学现在的企业很现实，他们更喜欢直接为企业创造价值的人才而不愿意其花时间、花金钱去嘻嘻嘻啊实打实的阿松大一个嵌入式研发工程师，因为这样企业面临被“炒鱿鱼”的风险。
+                        嘻嘻嘻啊实打实的阿松大一个合格的嵌入式工程师，有一定实力的机构也需要3-5个月，而企业恐怕要花1年时间来嘻嘻嘻啊实打实的阿松大一个新人成为嵌入式工程师。而即便如此，学会了嵌入式开发技术的新人，可能很快就会被别的公司挖走，因为嵌入式开发人才太紧缺，很多公司愿意花高价挖人才。3、选择具有一定规模和影响力的嵌入式人才外包机构直接进入嵌入式开发领域。这是一个很多求职者、大学应届毕业生，以及有一点嵌入式开发基础的人进入嵌入式开发行业的最快方式。
+                        最大的好处有以下3点：1、非常完善的开发软件、硬件平台，并可以教给学员如何快速搭建开发环境。2、在项目经理的及实训导师的指导下，以大量的实验项目、企业商用源码最为实习案例，让学员尽快掌握嵌入式开发。3、选择一个具有影响力的外包机构，学员不仅实现的起点更高，更多的是为学员以后的发展奠定了坚实的技术基础，以便学员进入嵌入式领域后，真正成为一名合格的嵌入式开发工程师。</p>
+                    <p><a href="#"><input type="button" value="更多…" /></a></p>
+                </div>
+                <div class="blog-meta">
+                    <img src="img/avatar.png" alt="Avatar" />
+                    <h4 class="blog-meta-author"><a href="#">张二天</a></h4>
+                    <span>顶顶顶: <a href="#">嵌入式开发工程师</a>, <a href="#">月薪20K+</a></span>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="img/blog4.jpg" alt="Blog image" class="fullwidth" />
+                <div class="wrapper">
+                    <span class="post-date">2016-07-01</span>
+                    <h2 class="blog-post-title">3g服务外包基地国庆期间新增的招聘</h2>
+                    <p>3g服务外包基地在国庆节期间依然接到了众多合作企业的合作请求，为了满足合作企业用人紧，用人急，项目多的急切要求，对于有志于从事安卓软件开发、嵌入式软件开发的广大朋友，合作企业将按照“先面试、后实习、再上岗”的要求进行人才选拔，现将部分职位信息公告如下：
+                        上海华腾软件系统有限公司 工作地点：西安 上海1、统招大专及以上学历2、
+                        熟悉Android开发，了解安卓开发的基本流程3、掌握Android的多线程、安全、性能等特性，有的App开发经验者优先4、有平板电脑开发经验优先。</p>
+                    <p><a href="#"><input type="button" value="更多…" /></a></p>
+                </div>
+                <div class="blog-meta">
+                    <img src="img/avatar.png" alt="Avatar" />
+                    <h4 class="blog-meta-author"><a href="#">赵日天</a></h4>
+                    <span>顶顶顶: <a href="#">安卓开发工程师</a>, <a href="#">月薪16K+</a></span>
+                </div>
+            </div>
+
             <section id="footer">
-                    <div id="footer-left">
-                        <span>陕ICP备10009409号 &copy; 2016 - 2017</span>
-                    </div>
-                    
-                    <div id="footer-right">
-                        <span>www.meichangliang.com</span>
-                    </div>    
-                </section>
-                
+                <div id="footer-left">
+                    <span>陕ICP备10009409号 &copy; 2016 - 2017</span>
+                </div>
+
+                <div id="footer-right">
+                    <span>www.meichangliang.com</span>
+                </div>
             </section>
-    	</section>
-    </body>
+
+        </section>
+    </section>
+</body>
+
 </html>
